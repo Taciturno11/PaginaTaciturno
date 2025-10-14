@@ -1,0 +1,38 @@
+/* --- ESTILOS BASE (para pantallas pequeñas / móviles) --- */
+/* Esto se aplica a TODO por defecto. */
+.contenedor {
+    display: flex;
+    flex-direction: column; /* Apila las cajas verticalmente */
+  }
+  
+  .caja {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  /* --- BREAKPOINT PARA PANTALLAS MEDIANAS (Tablets) --- */
+  /* @media le dice al navegador: "¡Escucha! Solo aplica esto si la condición se cumple" */
+  /* (min-width: 768px) es la condición: "si el ancho del viewport es 768px o más" */
+  @media (min-width: 768px) {
+    .contenedor {
+      flex-direction: row; /* Pone las cajas en fila */
+      flex-wrap: wrap;     /* Permite que pasen a la siguiente línea si no caben */
+    }
+  
+    .caja {
+      width: calc(50% - 10px); /* Ocupan casi la mitad del espacio para hacer 2 columnas */
+    }
+  }
+  
+  /* --- BREAKPOINT PARA PANTALLAS GRANDES (Escritorio) --- */
+  /* "si el ancho del viewport es 1024px o más" */
+  @media (min-width: 1024px) {
+    .contenedor {
+        display: flex;
+
+
+    }
+  }

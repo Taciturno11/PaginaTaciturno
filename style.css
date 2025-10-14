@@ -59,7 +59,7 @@ ul li {
 
 ul a {
     color: var(--color-texto-claro);
-    padding: 20px 25px;
+    padding: 10px 15px;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: block;
@@ -89,54 +89,20 @@ ul a:hover::after {
 }
 
 /* ===================================
-   SECCIÓN HERO
-   =================================== */
-
-.hero {
-    text-align: center;
-    padding: 100px 20px 80px;
-    background: linear-gradient(180deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%);
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
-    animation: fadeInDown 0.8s ease;
-}
-
-.hero .subtitulo {
-    font-size: 1.8rem;
-    color: var(--color-texto-claro);
-    margin-bottom: 10px;
-    animation: fadeInUp 0.8s ease 0.2s both;
-}
-
-.hero .descripcion {
-    font-size: 1.1rem;
-    color: rgba(224, 224, 224, 0.7);
-    animation: fadeInUp 0.8s ease 0.4s both;
-}
-
-/* ===================================
    SECCIÓN TARJETAS Y CARRUSEL
    =================================== */
 
 .Tarjetas {
     position: relative;
-    padding: 30px 20px 100px;
+    padding: 15px 20px 100px;
     text-align: center;
     overflow: visible;
-    min-height: 800px;
+    min-height: 650px; /* Reducido de 800px */
 }
 
 .titulo-seccion {
     font-size: 2.5rem;
-    margin-bottom: 60px;
+    margin-bottom: 50px; /* Reducido de 60px */
     color: var(--color-texto-claro);
     text-align: center;
     position: relative;
@@ -156,10 +122,10 @@ ul a:hover::after {
 .carrusel-contenedor {
     max-width: 100%;
     width: 100%;
-    height: 650px;
+    height: 550px; /* Reducido de 650px a 550px */
     margin: 0 auto;
     overflow: visible;
-    padding: 50px 0;
+    padding: 40px 0; /* Reducido de 50px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,8 +135,8 @@ ul a:hover::after {
 /* Lista de tarjetas - Carrusel Circular 3D */
 .carrusel-lista {
     position: relative;
-    width: 350px;
-    height: 550px;
+    width: 300px; /* Reducido de 350px a 300px */
+    height: 471px; /* Reducido de 550px a 471px (300 * 1.57) */
     transform-style: preserve-3d;
     display: flex;
     justify-content: center;
@@ -183,10 +149,10 @@ ul a:hover::after {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -175px; /* -350px / 2 */
-    margin-top: -275px; /* -550px / 2 */
-    min-width: 350px;
-    width: 350px;
+    margin-left: -150px; /* -300px / 2 */
+    margin-top: -236px; /* -471px / 2 (redondeado) */
+    min-width: 300px; /* Reducido de 350px */
+    width: 300px; /* Reducido de 350px */
     flex-shrink: 0;
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform, opacity, filter;
@@ -207,7 +173,7 @@ ul a:hover::after {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
     border: 1px solid rgba(99, 102, 241, 0.1);
-    height: 550px; /* Proporción vertical: 350px * 1.57 */
+    height: 471px; /* Reducido de 550px (300 * 1.57) */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -429,6 +395,73 @@ footer p {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+
+/* Pantallas medianas (1600px o menos) */
+@media (max-width: 1600px) {
+    /* AQUÍ ESTÁ LA MAGIA: 
+       Define un factor de escala. 1 es el tamaño original. 
+       0.9 significa "reducir todo al 90%". 
+       ¡Solo necesitas ajustar este número! 
+    */
+    :root {
+        --escala: 0.8; 
+    }
+
+    .titulo-seccion {
+        font-size: calc(2.2rem * var(--escala));
+    }
+
+    .Tarjetas {
+        min-height: calc(650px * var(--escala));
+    }
+
+    .carrusel-contenedor {
+        height: calc(550px * var(--escala));
+        perspective: calc(1400px * var(--escala));
+    }
+
+    .carrusel-lista {
+        width: calc(300px * var(--escala));
+        height: calc(471px * var(--escala));
+    }
+
+    .carrusel-item {
+        min-width: calc(300px * var(--escala));
+        width: calc(300px * var(--escala));
+        margin-left: calc(-150px * var(--escala));
+        margin-top: calc(-236px * var(--escala));
+    }
+
+    .tarjeta-producto {
+        height: calc(471px * var(--escala));
+    }
+
+    .tarjeta-contenido h3 {
+        font-size: calc(1.3rem * var(--escala));
+    }
+
+    .tarjeta-contenido p {
+        font-size: calc(0.82rem * var(--escala));
+    }
+
+    .tarjeta-precio {
+        font-size: calc(1.5rem * var(--escala));
+    }
+
+    .carrusel-flecha {
+        width: calc(55px * var(--escala));
+        height: calc(55px * var(--escala));
+        font-size: calc(1.6em * var(--escala));
+    }
+
+    .carrusel-flecha.izquierda {
+        left: calc(15px * var(--escala));
+    }
+
+    .carrusel-flecha.derecha {
+        right: calc(15px * var(--escala));
+    }
+}
 
 /* Tablets */
 @media (max-width: 768px) {
