@@ -5,254 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MartinCode - Tarjetas Virtuales</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- Navegación -->
     <nav>
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#tarjetas">Tarjetas</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contáctame</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tarjetas.html">Tarjetas</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contáctame</a></li>
       </ul>
     </nav>
 
-    <section class="Tarjetas" id="tarjetas">
-      <h2 class="titulo-seccion">Nuestras Tarjetas</h2>
-      
-      <button class="carrusel-flecha izquierda" id="prevBtn" aria-label="Tarjeta anterior">
-        &#10094;
-      </button>
-
-      <div class="carrusel-contenedor">
-        <div class="carrusel-lista" id="carruselLista">
-          
-            <!-- Tarjeta 3 -->
-            <div class="tarjeta-producto carrusel-item">
-              <div class="tarjeta-imagen">
-                <img src="img/tarjeta1_azul.svg" alt="Tarjeta Virtual Diseño 3">
-              </div>
-              <div class="tarjeta-contenido">
-                <h3>Diseño Minimalista</h3>
-                <p>Simplicidad y elegancia. Perfecto para invitaciones corporativas.</p>
-                <div class="tarjeta-precio">S/.100</div>
-                <a href="#" class="boton-detalle">Ver Detalles</a>
-              </div>
-            </div>
-  
-            <!-- Tarjeta 4 -->
-            <div class="tarjeta-producto carrusel-item">
-              <div class="tarjeta-imagen">
-                <img src="img/tarjetaPasteleria.svg" alt="Tarjeta Virtual Diseño 4">
-              </div>
-              <div class="tarjeta-contenido">
-                <h3>Diseño Festivo</h3>
-                <p>Para celebraciones especiales. Lleno de color y alegría.</p>
-                <div class="tarjeta-precio">S/.100</div>
-                <a href="#" class="boton-detalle">Ver Detalles</a>
-              </div>
-            </div>
-          <!-- Tarjeta 1 -->
-          <div class="tarjeta-producto carrusel-item">
-            <div class="tarjeta-imagen">
-              <img src="img/4.svg" alt="Tarjeta Virtual Diseño 1">
-            </div>
-            <div class="tarjeta-contenido">
-              <h3>Diseño Elegante</h3>
-              <p>Perfecta para bodas y eventos formales. Diseño sofisticado con detalles dorados.</p>
-              <div class="tarjeta-precio">S/.100</div>
-              <a href="#" class="boton-detalle">Ver Detalles</a>
-            </div>
+    <!-- Sección Inicio (Hero) - diseño en dos columnas: texto izquierda, foto derecha -->
+    <section
+      id="inicio"
+      class="hero"
+      role="banner"
+      aria-label="Sección de inicio"
+    >
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h1 class="title">I am a <span></span></h1>
+          <p>
+            Soy estudiante de ingeneria de Software. Me encuentro en el 9°Ciclo. Me especializo en diseño de tarjetas
+            virtuales y experiencias digitales para eventos. Me gusta aprender,
+            crear y mejorar realizando proyectos reales.
+          </p>
+          <div class="hero-cta">
+            <a href="tarjetas.html" class="btn primary">Ver Tarjetas</a>
+            <a href="proyectos.html" class="btn secondary">Ver Proyectos</a>
           </div>
-
-          <!-- Tarjeta 2 -->
-          <div class="tarjeta-producto carrusel-item">
-            <div class="tarjeta-imagen">
-              <img src="img/modelo1v4.svg" alt="Tarjeta Virtual Diseño 2">
-            </div>
-            <div class="tarjeta-contenido">
-              <h3>Diseño Moderno</h3>
-              <p>Ideal para cumpleaños y celebraciones. Colores vibrantes y animaciones.</p>
-              <div class="tarjeta-precio">S/.100</div>
-              <a href="#" class="boton-detalle">Ver Detalles</a>
-            </div>
-          </div>
-
-
-          <!-- Tarjeta 5 -->
-          <div class="tarjeta-producto carrusel-item">
-            <div class="tarjeta-imagen">
-              <img src="img/1.png" alt="Tarjeta Virtual Diseño 5">
-            </div>
-            <div class="tarjeta-contenido">
-              <h3>Diseño Premium</h3>
-              <p>Exclusivo y personalizado. La mejor opción para eventos únicos.</p>
-              <div class="tarjeta-precio">S/.100</div>
-              <a href="#" class="boton-detalle">Ver Detalles</a>
-            </div>
-          </div>
-          
+        </div>
+        <div class="hero-right" aria-hidden="false">
+          <img
+            src="img/martinCode.jpg"
+            alt="Foto de MartinCode"
+            id="martinFoto"
+          />
         </div>
       </div>
-
-      <button class="carrusel-flecha derecha" id="nextBtn" aria-label="Siguiente tarjeta">
-        &#10095;
-      </button>
-
-      <!-- Indicadores de posición -->
-      <div class="carrusel-indicadores" id="indicadores"></div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 MartinCode - Tarjetas Virtuales. Todos los derechos reservados.</p>
+      <p>
+        &copy; 2025 MartinCode - Tarjetas Virtuales. Todos los derechos
+        reservados.
+      </p>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-      const carruselLista = document.getElementById('carruselLista');
-      const items = document.querySelectorAll('.carrusel-item');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const indicadoresContainer = document.getElementById('indicadores');
-      
-      let currentIndex = 0;
-
-      // Crear indicadores dinámicamente
-      function crearIndicadores() {
-        items.forEach((_, index) => {
-          const indicador = document.createElement('span');
-          indicador.classList.add('indicador');
-          if (index === 0) indicador.classList.add('activo');
-          indicador.addEventListener('click', () => {
-            currentIndex = index;
-            updateCarrusel();
-          });
-          indicadoresContainer.appendChild(indicador);
-        });
-      }
-
-      // Función principal - Carrusel Circular 3D (Estilo videojuego)
-      function updateCarrusel() {
-        const totalItems = items.length;
-        const angleStep = (2 * Math.PI) / totalItems; // Ángulo entre cada tarjeta
-        const radius = 450; // Radio del círculo/elipse
-        const radiusY = 80; // Radio vertical para crear efecto elipse
-
-        items.forEach((item, index) => {
-          // Calcular la posición relativa al item activo
-          let relativeIndex = index - currentIndex;
-          
-          // Hacer el carrusel circular (wrap around)
-          if (relativeIndex > totalItems / 2) {
-            relativeIndex -= totalItems;
-          } else if (relativeIndex < -totalItems / 2) {
-            relativeIndex += totalItems;
-          }
-
-          // Calcular ángulo para esta tarjeta en el círculo
-          const angle = relativeIndex * angleStep;
-          
-          // Calcular posición X e Y en el círculo/elipse
-          const x = Math.sin(angle) * radius;
-          const y = Math.cos(angle) * radiusY - radiusY; // Offset Y para elevar las traseras
-          const z = Math.cos(angle) * 300; // Profundidad
-          
-          // Calcular escala basada en la posición Z (más lejos = más pequeño)
-          const scale = Math.max(0.4, 1 - Math.abs(relativeIndex) * 0.2);
-          
-          // Calcular opacidad
-          const opacity = Math.max(0.3, 1 - Math.abs(relativeIndex) * 0.25);
-          
-          // Calcular blur
-          const blur = Math.abs(relativeIndex) * 2;
-          
-          // Aplicar transformaciones
-          item.style.transform = `
-            translateX(${x}px) 
-            translateY(${y}px) 
-            translateZ(${z}px) 
-            scale(${scale})
-          `;
-          item.style.opacity = opacity;
-          item.style.filter = `blur(${blur}px)`;
-          item.style.zIndex = Math.round(100 + z);
-          
-          // Marcar tarjeta activa (la del centro)
-          if (index === currentIndex) {
-            item.classList.add('activo');
-          } else {
-            item.classList.remove('activo');
-          }
-        });
-
-        // Actualizar indicadores
-        const indicadores = document.querySelectorAll('.indicador');
-        indicadores.forEach((indicador, index) => {
-          indicador.classList.remove('activo');
-          if (index === currentIndex) {
-            indicador.classList.add('activo');
-          }
-        });
-      }
-
-      // Evento para el botón Siguiente
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex < items.length - 1) {
-          currentIndex++;
-        } else {
-          currentIndex = 0; // Vuelve al inicio
-        }
-        updateCarrusel();
-      });
-
-      // Evento para el botón Anterior
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-        } else {
-          currentIndex = items.length - 1; // Vuelve al final
-        }
-        updateCarrusel();
-      });
-
-      // Navegación con teclado
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-          prevBtn.click();
-        } else if (e.key === 'ArrowRight') {
-          nextBtn.click();
-        }
-      });
-
-      // Soporte para gestos táctiles
-      let touchStartX = 0;
-      let touchEndX = 0;
-
-      carruselLista.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      });
-
-      carruselLista.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-      });
-
-      function handleSwipe() {
-        if (touchStartX - touchEndX > 50) {
-          // Swipe izquierda
-          nextBtn.click();
-        }
-        if (touchEndX - touchStartX > 50) {
-          // Swipe derecha
-          prevBtn.click();
-        }
-      }
-
-      // Inicializar
-      crearIndicadores();
-      updateCarrusel();
-    </script>
-
   </body>
 </html>
