@@ -26,7 +26,6 @@
           <div class="nivel-proyectos">
             <div class="nivel-titulo">
               <span class="nivel-badge basico">Básico</span>
-   
             </div>
             <div class="contenedor-proyectos">
               <!-- Proyecto Básico 1 -->
@@ -51,7 +50,6 @@
                   </p>
                   <div class="proyecto-links">
                     <a href="#" class="proyecto-link demo">Ver Demo</a>
-                    
                   </div>
                 </div>
               </article>
@@ -62,7 +60,6 @@
           <div class="nivel-proyectos">
             <div class="nivel-titulo">
               <span class="nivel-badge intermedio">Intermedio</span>
-              
             </div>
             <div class="contenedor-proyectos">
               <!-- Proyecto Intermedio 1 -->
@@ -86,13 +83,18 @@
                     </div>
                   </div>
                   <p class="proyecto-descripcion">
-                  Aplicación para realizar videollamadas en tiempo real con WebRTC, Node.js y PeerJS.
-                  Funciona tanto en redes locales como públicas, 
-                  utilizando herramientas como ngrok para exponer el servidor a internet.
+                    Aplicación para realizar videollamadas en tiempo real con
+                    WebRTC, Node.js y PeerJS. Funciona tanto en redes locales
+                    como públicas, utilizando herramientas como ngrok para
+                    exponer el servidor a internet.
                   </p>
                   <div class="proyecto-links">
-                    <a href="#" class="proyecto-link demo" id="openVideoModalIntermedio">Ver Demo</a>
-                    
+                    <a
+                      href="#"
+                      class="proyecto-link demo"
+                      id="openVideoModalIntermedio"
+                      >Ver Demo</a
+                    >
                   </div>
                 </div>
               </article>
@@ -125,10 +127,21 @@
                     </div>
                   </div>
                   <p class="proyecto-descripcion">
-                    Este proyecto es una aplicación web diseñada para gestionar tareas y actividades de empleados en una organización. Incluye funcionalidades como autenticación de usuarios, notificaciones, gestión de solicitudes, retroalimentación semanal y más. La interfaz es moderna y responsiva, mientras que el backend asegura un manejo eficiente de datos y seguridad.
+                    Este proyecto es una aplicación web diseñada para gestionar
+                    tareas y actividades de empleados en una organización.
+                    Incluye funcionalidades como autenticación de usuarios,
+                    notificaciones, gestión de solicitudes, retroalimentación
+                    semanal y más. La interfaz es moderna y responsiva, mientras
+                    que el backend asegura un manejo eficiente de datos y
+                    seguridad.
                   </p>
                   <div class="proyecto-links">
-                    <a href="#" class="proyecto-link demo" id="openVideoModalTareas">Ver Demo</a>
+                    <a
+                      href="#"
+                      class="proyecto-link demo"
+                      id="openVideoModalTareas"
+                      >Ver Demo</a
+                    >
                   </div>
                 </div>
               </article>
@@ -139,16 +152,12 @@
           <div class="nivel-proyectos">
             <div class="nivel-titulo">
               <span class="nivel-badge avanzado">Avanzado</span>
-             
             </div>
             <div class="contenedor-proyectos">
               <!-- Proyecto Avanzado 1 -->
               <article class="proyecto-card">
                 <div class="proyecto-imagen">
-                  <img
-                    src="img/Avanzado1.png"
-                    alt="Aplicación Full Stack"
-                  />
+                  <img src="img/Avanzado1.png" alt="Aplicación Full Stack" />
                 </div>
                 <div class="proyecto-contenido">
                   <div class="proyecto-header">
@@ -160,9 +169,7 @@
                         <span class="tecnologia-tag">Vite</span>
                         <span class="tecnologia-tag">Axios</span>
 
-                      
                         <span class="tecnologia-tag">Tailwind CSS</span>
-
                       </div>
                       <div class="tecnologias-back">
                         <strong>Backend:</strong>
@@ -174,13 +181,17 @@
                     </div>
                   </div>
                   <p class="proyecto-descripcion">
-                  Aplicación Integral desarrollada para la empresa "Partner Service", 
-                  diseñada para la gestión de empleados. Incluye autenticación segura, 
-                  generación de reportes detallados, administración de nóminas, visualización 
-                  de asistencias, tardanzas, pagos y gastos de la empresa, y un panel administrativo intuitivo
+                    Aplicación Integral desarrollada para la empresa "Partner
+                    Service", diseñada para la gestión de empleados. Incluye
+                    autenticación segura, generación de reportes detallados,
+                    administración de nóminas, visualización de asistencias,
+                    tardanzas, pagos y gastos de la empresa, y un panel
+                    administrativo intuitivo
                   </p>
                   <div class="proyecto-links">
-                    <a href="#" class="proyecto-link demo" id="openVideoModal">Ver Demo</a>
+                    <a href="#" class="proyecto-link demo" id="openVideoModal"
+                      >Ver Demo</a
+                    >
                   </div>
                 </div>
               </article>
@@ -200,7 +211,7 @@
         <span class="modal-cerrar" id="closeModal">&times;</span>
         <h3>Demo - Aplicación Full Stack</h3>
         <video controls class="modal-video">
-          <source src="media/PaginaAdministrativa.mp4" type="video/mp4">
+          <source src="media/PaginaAdministrativa.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -212,7 +223,7 @@
         <span class="modal-cerrar" id="closeModalIntermedio">&times;</span>
         <h3>Demo - Aplicación de Videollamadas</h3>
         <video controls class="modal-video">
-          <source src="media/ProyectoVideollamada2.mp4" type="video/mp4">
+          <source src="media/ProyectoVideollamada2.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -224,7 +235,7 @@
         <span class="modal-cerrar" id="closeModalTareas">&times;</span>
         <h3>Demo - Sistema de Gestión de Tareas</h3>
         <video controls class="modal-video">
-          <source src="media/Tareas.mp4" type="video/mp4">
+          <source src="media/Tareas.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -232,108 +243,112 @@
 
     <script>
       // Modal de video
-      const modal = document.getElementById('videoModal');
-      const openBtn = document.getElementById('openVideoModal');
-      const closeBtn = document.getElementById('closeModal');
-      const video = document.querySelector('.modal-video');
+      const modal = document.getElementById("videoModal");
+      const openBtn = document.getElementById("openVideoModal");
+      const closeBtn = document.getElementById("closeModal");
+      const video = document.querySelector(".modal-video");
 
-      openBtn.addEventListener('click', (e) => {
+      openBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        modal.style.display = 'flex';
+        modal.style.display = "flex";
         video.play();
       });
 
-      closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
         video.pause();
         video.currentTime = 0;
       });
 
       // Cerrar al hacer clic fuera del modal
-      window.addEventListener('click', (e) => {
+      window.addEventListener("click", (e) => {
         if (e.target === modal) {
-          modal.style.display = 'none';
+          modal.style.display = "none";
           video.pause();
           video.currentTime = 0;
         }
       });
 
       // Cerrar con tecla ESC
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-          modal.style.display = 'none';
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+          modal.style.display = "none";
           video.pause();
           video.currentTime = 0;
         }
       });
 
       // Modal de video para Intermedio
-      const modalIntermedio = document.getElementById('videoModalIntermedio');
-      const openBtnIntermedio = document.getElementById('openVideoModalIntermedio');
-      const closeBtnIntermedio = document.getElementById('closeModalIntermedio');
-      const videoIntermedio = modalIntermedio.querySelector('.modal-video');
+      const modalIntermedio = document.getElementById("videoModalIntermedio");
+      const openBtnIntermedio = document.getElementById(
+        "openVideoModalIntermedio"
+      );
+      const closeBtnIntermedio = document.getElementById(
+        "closeModalIntermedio"
+      );
+      const videoIntermedio = modalIntermedio.querySelector(".modal-video");
 
-      openBtnIntermedio.addEventListener('click', (e) => {
+      openBtnIntermedio.addEventListener("click", (e) => {
         e.preventDefault();
-        modalIntermedio.style.display = 'flex';
+        modalIntermedio.style.display = "flex";
         videoIntermedio.play();
       });
 
-      closeBtnIntermedio.addEventListener('click', () => {
-        modalIntermedio.style.display = 'none';
+      closeBtnIntermedio.addEventListener("click", () => {
+        modalIntermedio.style.display = "none";
         videoIntermedio.pause();
         videoIntermedio.currentTime = 0;
       });
 
       // Cerrar al hacer clic fuera del modal
-      window.addEventListener('click', (e) => {
+      window.addEventListener("click", (e) => {
         if (e.target === modalIntermedio) {
-          modalIntermedio.style.display = 'none';
+          modalIntermedio.style.display = "none";
           videoIntermedio.pause();
           videoIntermedio.currentTime = 0;
         }
       });
 
       // Cerrar con tecla ESC
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modalIntermedio.style.display === 'flex') {
-          modalIntermedio.style.display = 'none';
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modalIntermedio.style.display === "flex") {
+          modalIntermedio.style.display = "none";
           videoIntermedio.pause();
           videoIntermedio.currentTime = 0;
         }
       });
 
       // Modal de video para Tareas
-      const modalTareas = document.getElementById('videoModalTareas');
-      const openBtnTareas = document.getElementById('openVideoModalTareas');
-      const closeBtnTareas = document.getElementById('closeModalTareas');
-      const videoTareas = modalTareas.querySelector('.modal-video');
+      const modalTareas = document.getElementById("videoModalTareas");
+      const openBtnTareas = document.getElementById("openVideoModalTareas");
+      const closeBtnTareas = document.getElementById("closeModalTareas");
+      const videoTareas = modalTareas.querySelector(".modal-video");
 
-      openBtnTareas.addEventListener('click', (e) => {
+      openBtnTareas.addEventListener("click", (e) => {
         e.preventDefault();
-        modalTareas.style.display = 'flex';
+        modalTareas.style.display = "flex";
         videoTareas.play();
       });
 
-      closeBtnTareas.addEventListener('click', () => {
-        modalTareas.style.display = 'none';
+      closeBtnTareas.addEventListener("click", () => {
+        modalTareas.style.display = "none";
         videoTareas.pause();
         videoTareas.currentTime = 0;
       });
 
       // Cerrar al hacer clic fuera del modal
-      window.addEventListener('click', (e) => {
+      window.addEventListener("click", (e) => {
         if (e.target === modalTareas) {
-          modalTareas.style.display = 'none';
+          modalTareas.style.display = "none";
           videoTareas.pause();
           videoTareas.currentTime = 0;
         }
       });
 
       // Cerrar con tecla ESC
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modalTareas.style.display === 'flex') {
-          modalTareas.style.display = 'none';
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modalTareas.style.display === "flex") {
+          modalTareas.style.display = "none";
           videoTareas.pause();
           videoTareas.currentTime = 0;
         }
