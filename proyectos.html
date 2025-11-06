@@ -69,13 +69,13 @@
               <article class="proyecto-card">
                 <div class="proyecto-imagen">
                   <img
-                    src="img/proyecto-carrusel.jpg"
+                    src="img/paginavideollamada.png"
                     alt="Carrusel de Tarjetas"
                   />
                 </div>
                 <div class="proyecto-contenido">
                   <div class="proyecto-header">
-                    <h4>Carrusel de Tarjetas</h4>
+                    <h4>Aplicación de Videollamadas</h4>
                     <div class="tecnologias">
                       <span class="tecnologia-tag">HTML5</span>
                       <span class="tecnologia-tag">CSS3</span>
@@ -83,11 +83,11 @@
                     </div>
                   </div>
                   <p class="proyecto-descripcion">
-                    Sistema de carrusel interactivo con animaciones suaves y
-                    diseño responsivo.
+                  Aplicación para realizar videollamadas en tiempo real utilizando 
+                  WebRTC y un servidor personalizado con Node.js y PeerJS.
                   </p>
                   <div class="proyecto-links">
-                    <a href="#" class="proyecto-link demo">Ver Demo</a>
+                    <a href="#" class="proyecto-link demo" id="openVideoModalIntermedio">Ver Demo</a>
                     
                   </div>
                 </div>
@@ -150,6 +150,18 @@
       </div>
     </div>
 
+    <!-- Modal para el video de Intermedio -->
+    <div id="videoModalIntermedio" class="video-modal">
+      <div class="modal-contenido">
+        <span class="modal-cerrar" id="closeModalIntermedio">&times;</span>
+        <h3>Demo - Aplicación de Videollamadas</h3>
+        <video controls class="modal-video">
+          <source src="media/ProyectoVideollamada2.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </div>
+
     <script>
       // Modal de video
       const modal = document.getElementById('videoModal');
@@ -184,6 +196,42 @@
           modal.style.display = 'none';
           video.pause();
           video.currentTime = 0;
+        }
+      });
+
+      // Modal de video para Intermedio
+      const modalIntermedio = document.getElementById('videoModalIntermedio');
+      const openBtnIntermedio = document.getElementById('openVideoModalIntermedio');
+      const closeBtnIntermedio = document.getElementById('closeModalIntermedio');
+      const videoIntermedio = modalIntermedio.querySelector('.modal-video');
+
+      openBtnIntermedio.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalIntermedio.style.display = 'flex';
+        videoIntermedio.play();
+      });
+
+      closeBtnIntermedio.addEventListener('click', () => {
+        modalIntermedio.style.display = 'none';
+        videoIntermedio.pause();
+        videoIntermedio.currentTime = 0;
+      });
+
+      // Cerrar al hacer clic fuera del modal
+      window.addEventListener('click', (e) => {
+        if (e.target === modalIntermedio) {
+          modalIntermedio.style.display = 'none';
+          videoIntermedio.pause();
+          videoIntermedio.currentTime = 0;
+        }
+      });
+
+      // Cerrar con tecla ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalIntermedio.style.display === 'flex') {
+          modalIntermedio.style.display = 'none';
+          videoIntermedio.pause();
+          videoIntermedio.currentTime = 0;
         }
       });
     </script>
