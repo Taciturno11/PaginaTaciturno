@@ -35,7 +35,7 @@
                 </div>
                 <div class="proyecto-contenido">
                   <div class="proyecto-header">
-                    <h4>Sistema de Gestión de Empleados</h4>
+                    <h4>Sistema Integral de Gestión de Empleados</h4>
                     <div class="tecnologias">
                       <div class="tecnologias-front">
                         <strong>Frontend:</strong>
@@ -78,6 +78,50 @@
               <span class="nivel-badge intermedio">Intermedio</span>
             </div>
             <div class="contenedor-proyectos">
+              <!-- Proyecto Intermedio 2 -->
+              <article class="proyecto-card">
+                <div class="proyecto-imagen">
+                  <img
+                    src="img/tareas.png"
+                    alt="Sistema de Gestión de Tareas"
+                  />
+                </div>
+                <div class="proyecto-contenido">
+                  <div class="proyecto-header">
+                    <h4>Sistema de Gestión de Tareas</h4>
+                    <div class="tecnologias">
+                      <div class="tecnologias-front">
+                        <strong>Frontend:</strong>
+                        <span class="tecnologia-tag">React</span>
+                        <span class="tecnologia-tag">Vite</span>
+                        <span class="tecnologia-tag">Tailwind CSS</span>
+                        <span class="tecnologia-tag">Axios</span>
+                      </div>
+                      <div class="tecnologias-back">
+                        <strong>Backend:</strong>
+                        <span class="tecnologia-tag">Node.js</span>
+                        <span class="tecnologia-tag">Express.js</span>
+                        <span class="tecnologia-tag">JWT</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="proyecto-descripcion">
+                    Este proyecto es una aplicación web diseñada para gestionar
+                    tareas y actividades de empleados de la empresa PARTNER.
+                    Incluye funcionalidades como autenticación de usuarios,
+                    notificaciones, gestión de solicitudes, retroalimentación
+                    semanal, etc.
+                  </p>
+                  <div class="proyecto-links">
+                    <a
+                      href="#"
+                      class="proyecto-link demo"
+                      id="openVideoModalTareas"
+                      >Ver Demo</a
+                    >
+                  </div>
+                </div>
+              </article>
               <!-- Proyecto Intermedio 1 -->
               <article class="proyecto-card">
                 <div class="proyecto-imagen">
@@ -115,50 +159,6 @@
                 </div>
               </article>
 
-              <!-- Proyecto Intermedio 2 -->
-              <article class="proyecto-card">
-                <div class="proyecto-imagen">
-                  <img
-                    src="img/tareas.png"
-                    alt="Sistema de Gestión de Tareas"
-                  />
-                </div>
-                <div class="proyecto-contenido">
-                  <div class="proyecto-header">
-                    <h4>Sistema de Gestión de Tareas para Empleados</h4>
-                    <div class="tecnologias">
-                      <div class="tecnologias-front">
-                        <strong>Frontend:</strong>
-                        <span class="tecnologia-tag">React</span>
-                        <span class="tecnologia-tag">Vite</span>
-                        <span class="tecnologia-tag">Tailwind CSS</span>
-                        <span class="tecnologia-tag">Axios</span>
-                      </div>
-                      <div class="tecnologias-back">
-                        <strong>Backend:</strong>
-                        <span class="tecnologia-tag">Node.js</span>
-                        <span class="tecnologia-tag">Express.js</span>
-                        <span class="tecnologia-tag">JWT</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="proyecto-descripcion">
-                    Este proyecto es una aplicación web diseñada para gestionar
-                    tareas y actividades de empleados de la empresa PARTNER.
-                    Incluye funcionalidades como autenticación de usuarios,
-                    notificaciones, gestión de solicitudes, retroalimentación
-                    semanal, etc.
-                  </p>
-                  <div class="proyecto-links">
-                    <a
-                      href="#"
-                      class="proyecto-link demo"
-                      id="openVideoModalTareas"
-                      >Ver Demo</a
-                    >
-                  </div>
-                </div>
-              </article>
             </div>
           </div>
 
@@ -172,21 +172,24 @@
               <article class="proyecto-card">
                 <div class="proyecto-imagen">
                   <img
-                    src="img/proyecto-landing.jpg"
+                    src="img/Pasteleria.png"
                     alt="Landing Page Personal"
                   />
                 </div>
                 <div class="proyecto-contenido">
                   <div class="proyecto-header">
-                    <h4>Landing Page Personal</h4>
+                    <h4>Página para Pastelería</h4>
                     <div class="tecnologias">
                       <span class="tecnologia-tag">HTML5</span>
                       <span class="tecnologia-tag">CSS3</span>
+                      <span class="tecnologia-tag">JavaScript</span>
+
                     </div>
                   </div>
                   <p class="proyecto-descripcion">
-                    Página web personal responsive con diseño moderno y
-                    animaciones suaves.
+                    Página web estática diseñada para una pastelería,
+                    destacando sus productos, servicios y promociones
+                    mediante un diseño atractivo y fácil de navegar.
                   </p>
                   <div class="proyecto-links">
                     <a href="#" class="proyecto-link demo">Ver Demo</a>
@@ -350,23 +353,6 @@
           videoTareas.pause();
           videoTareas.currentTime = 0;
         }
-      });
-
-      // Ajustar proporciones de imagen
-      document.querySelectorAll('.proyecto-imagen img').forEach((img) => {
-        img.addEventListener('load', () => {
-          const container = img.parentElement;
-          const containerAspectRatio = container.offsetWidth / container.offsetHeight;
-          const imageAspectRatio = img.naturalWidth / img.naturalHeight;
-
-          if (imageAspectRatio < containerAspectRatio) {
-            img.style.width = 'auto';
-            img.style.height = '100%';
-          } else {
-            img.style.width = '100%';
-            img.style.height = 'auto';
-          }
-        });
       });
     </script>
   </body>
