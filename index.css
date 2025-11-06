@@ -81,6 +81,34 @@
   flex-wrap: wrap;
 }
 
+/* Estilos para el botón Descargar CV */
+.hero-cta .btn-primary {
+  transition: opacity 0.3s ease;
+}
+
+.hero-cta .btn-primary i {
+  margin-right: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero-cta .btn-primary:hover {
+  opacity: 0.85;
+}
+
+.hero-cta .btn-primary:hover i {
+  animation: bounce 0.6s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
 /* Responsive: apilar columnas en pantallas pequeñas */
 @media (max-width: 768px) {
   .hero-grid {
@@ -108,5 +136,77 @@
   }
   .hero-left h1 {
     font-size: 1.8rem;
+  }
+}
+
+/* Skills compactas integradas en hero */
+.skills-compact {
+  margin-top: 30px;
+}
+
+.skills-compact-title {
+  font-size: 1.3rem;
+  color: var(--color-texto-claro);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.skill-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-compact-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-compact-header i {
+  font-size: 1.3rem;
+}
+
+.skill-compact-name {
+  font-size: 0.9rem;
+  color: rgba(224, 224, 224, 0.9);
+  font-weight: 500;
+}
+
+.skill-compact-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-compact-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), #818cf8);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+/* Responsive para skills compactas */
+@media (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-compact {
+    margin-top: 20px;
+  }
+  
+  .skills-compact-title {
+    font-size: 1.1rem;
   }
 }
