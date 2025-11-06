@@ -353,6 +353,23 @@
           videoTareas.currentTime = 0;
         }
       });
+
+      // Ajustar proporciones de imagen
+      document.querySelectorAll('.proyecto-imagen img').forEach((img) => {
+        img.addEventListener('load', () => {
+          const container = img.parentElement;
+          const containerAspectRatio = container.offsetWidth / container.offsetHeight;
+          const imageAspectRatio = img.naturalWidth / img.naturalHeight;
+
+          if (imageAspectRatio < containerAspectRatio) {
+            img.style.width = 'auto';
+            img.style.height = '100%';
+          } else {
+            img.style.width = '100%';
+            img.style.height = 'auto';
+          }
+        });
+      });
     </script>
   </body>
 </html>
