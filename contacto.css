@@ -1,9 +1,16 @@
 /* Estilos para la página de contacto */
+.contacto {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
 .contacto form {
   display: grid;
   gap: 12px;
   margin-top: 18px;
 }
+
 .contacto input,
 .contacto textarea {
   padding: 12px;
@@ -11,7 +18,59 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: transparent;
   color: var(--color-texto-claro);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
 }
+
+.contacto input:focus,
+.contacto textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
 .contacto .btn {
   width: max-content;
+  justify-self: flex-start;
+}
+
+/* Responsive para contacto */
+@media (max-width: 768px) {
+  .contacto {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  
+  .contacto form {
+    gap: 10px;
+  }
+  
+  .contacto input,
+  .contacto textarea {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    margin: 25px auto;
+    padding: 0 12px;
+  }
+  
+  .contacto p {
+    font-size: 0.9rem !important;
+  }
+  
+  .contacto input,
+  .contacto textarea {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+  
+  .contacto .btn {
+    width: 100%;
+    justify-self: stretch;
+    text-align: center;
+  }
 }

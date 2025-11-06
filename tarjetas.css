@@ -314,97 +314,257 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .texto-promocional {
+    top: 90px;
+    left: 15px;
+    max-width: 260px;
+    padding: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .texto-promocional {
     position: static;
-    max-width: 100%;
-    margin: 0 auto 30px;
+    max-width: 90%;
+    margin: 0 auto 25px;
     text-align: center;
   }
-  .Tarjetas {
-    min-height: 700px;
-  }
-  .carrusel-contenedor {
-    height: 550px;
-    perspective: 1200px;
-  }
-  .carrusel-lista {
-    width: 280px;
-    height: 440px;
-  }
-  .carrusel-item {
-    min-width: 280px;
-    width: 280px;
-    margin-left: -140px;
-    margin-top: -220px;
-  }
-  .tarjeta-producto {
-    height: 440px;
-  }
-  .tarjeta-contenido {
-    padding: 20px 15px 15px;
-  }
-  .tarjeta-contenido h3 {
-    font-size: 1.2rem;
-  }
-  .tarjeta-contenido p {
+  
+  .promo-badge {
     font-size: 0.8rem;
+    padding: 5px 12px;
   }
+  
+  .texto-promocional h3 {
+    font-size: 1.1rem;
+  }
+  
+  .texto-promocional p {
+    font-size: 0.85rem;
+  }
+  
+  .Tarjetas {
+    min-height: 650px;
+    padding: 30px 15px 80px;
+  }
+  
+  .carrusel-contenedor {
+    height: 500px;
+    perspective: 800px;
+    padding: 20px 0;
+  }
+  
+  .carrusel-lista {
+    width: 260px;
+    height: 408px;
+  }
+  
+  .carrusel-item {
+    min-width: 260px;
+    width: 260px;
+    margin-left: -130px;
+    margin-top: -204px;
+  }
+  
+  .tarjeta-producto {
+    height: 408px;
+  }
+  
+  .tarjeta-contenido {
+    padding: 18px 15px 15px;
+  }
+  
+  .tarjeta-contenido h3 {
+    font-size: 1.15rem;
+  }
+  
+  .tarjeta-contenido p {
+    font-size: 0.78rem;
+  }
+  
   .tarjeta-precio {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
+  
   .carrusel-flecha {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5em;
-    padding: 15px 12px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4em;
+    padding: 12px 10px;
+  }
+  
+  .carrusel-flecha.izquierda {
+    left: 8px;
+  }
+  
+  .carrusel-flecha.derecha {
+    right: 8px;
+  }
+  
+  .carrusel-indicadores {
+    margin-top: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .Tarjetas {
-    padding: 30px 10px 80px;
-    min-height: 600px;
+    padding: 25px 10px 70px;
+    min-height: 580px;
   }
+  
+  .titulo-seccion {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+  }
+  
+  .texto-promocional {
+    max-width: 95%;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .texto-promocional h3 {
+    font-size: 1rem;
+  }
+  
+  .texto-promocional p {
+    font-size: 0.8rem;
+  }
+  
   .carrusel-contenedor {
-    height: 480px;
-    perspective: 1000px;
+    height: 430px;
+    perspective: 700px;
+    padding: 15px 0;
   }
+  
   .carrusel-lista {
-    width: 240px;
-    height: 377px;
+    width: 220px;
+    height: 346px;
   }
+  
   .carrusel-item {
-    min-width: 240px;
-    width: 240px;
-    margin-left: -120px;
-    margin-top: -188px;
+    min-width: 220px;
+    width: 220px;
+    margin-left: -110px;
+    margin-top: -173px;
   }
+  
   .tarjeta-producto {
-    height: 377px;
+    height: 346px;
   }
+  
   .tarjeta-contenido {
-    padding: 15px 12px 12px;
-    transform: translateY(calc(100% - 70px));
+    padding: 14px 12px 12px;
+    transform: translateY(calc(100% - 65px));
+  }
+  
+  .tarjeta-contenido h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+  
+  .tarjeta-contenido p {
+    font-size: 0.72rem;
+    margin-bottom: 8px;
+  }
+  
+  .tarjeta-precio {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  
+  .boton-detalle {
+    padding: 7px 18px;
+    font-size: 0.8rem;
+  }
+  
+  .carrusel-flecha {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2em;
+    padding: 10px 8px;
+  }
+  
+  .carrusel-flecha.izquierda {
+    left: 5px;
+  }
+  
+  .carrusel-flecha.derecha {
+    right: 5px;
+  }
+  
+  .indicador {
+    width: 9px;
+    height: 9px;
+  }
+  
+  .carrusel-indicadores {
+    margin-top: 30px;
+    gap: 10px;
   }
 }
 
 @media (max-width: 360px) {
+  .Tarjetas {
+    padding: 20px 8px 60px;
+    min-height: 520px;
+  }
+  
+  .titulo-seccion {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+  
   .carrusel-contenedor {
-    height: 440px;
-    perspective: 900px;
+    height: 380px;
+    perspective: 600px;
   }
+  
   .carrusel-lista {
-    width: 200px;
-    height: 314px;
+    width: 190px;
+    height: 298px;
   }
+  
   .carrusel-item {
-    min-width: 200px;
-    width: 200px;
-    margin-left: -100px;
-    margin-top: -157px;
+    min-width: 190px;
+    width: 190px;
+    margin-left: -95px;
+    margin-top: -149px;
   }
+  
   .tarjeta-producto {
-    height: 314px;
+    height: 298px;
+  }
+  
+  .tarjeta-contenido h3 {
+    font-size: 0.95rem;
+  }
+  
+  .tarjeta-contenido p {
+    font-size: 0.68rem;
+  }
+  
+  .tarjeta-precio {
+    font-size: 1.1rem;
+  }
+  
+  .boton-detalle {
+    padding: 6px 15px;
+    font-size: 0.75rem;
+  }
+  
+  .carrusel-flecha {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1em;
+  }
+  
+  .carrusel-flecha.izquierda {
+    left: 3px;
+  }
+  
+  .carrusel-flecha.derecha {
+    right: 3px;
   }
 }

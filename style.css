@@ -345,6 +345,28 @@ footer p {
 
 /* Tablets */
 @media (max-width: 768px) {
+  nav {
+    padding: 8px 0;
+  }
+  
+  ul {
+    font-size: 15px;
+    gap: 5px;
+  }
+
+  ul li {
+    margin: 0 4px;
+  }
+
+  ul a {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .hero {
+    padding: 50px 15px;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -412,18 +434,34 @@ footer p {
   .carrusel-flecha.derecha {
     right: 10px;
   }
-
-  ul {
-    font-size: 16px;
-  }
-
-  ul a {
-    padding: 15px 20px;
-  }
 }
 
 /* Móviles */
 @media (max-width: 480px) {
+  nav {
+    padding: 6px 0;
+  }
+  
+  ul {
+    font-size: 13px;
+    gap: 2px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  ul li {
+    margin: 2px 2px;
+  }
+
+  ul a {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  
+  ul a::after {
+    display: none; /* Ocultar el underline animado en móvil */
+  }
+  
   .hero {
     padding: 60px 15px 50px;
   }
@@ -501,14 +539,6 @@ footer p {
     height: 45px;
     font-size: 1.3em;
     padding: 12px 10px;
-  }
-
-  ul {
-    font-size: 14px;
-  }
-
-  ul a {
-    padding: 12px 15px;
   }
 
   .indicador {
