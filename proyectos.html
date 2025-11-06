@@ -77,18 +77,58 @@
                   <div class="proyecto-header">
                     <h4>Aplicación de Videollamadas</h4>
                     <div class="tecnologias">
+                      <span class="tecnologia-tag">Node.js</span>
                       <span class="tecnologia-tag">HTML5</span>
                       <span class="tecnologia-tag">CSS3</span>
                       <span class="tecnologia-tag">JavaScript</span>
+                      <span class="tecnologia-tag">PeerJS</span>
+                      <span class="tecnologia-tag">Express.js</span>
                     </div>
                   </div>
                   <p class="proyecto-descripcion">
-                  Aplicación para realizar videollamadas en tiempo real utilizando 
-                  WebRTC y un servidor personalizado con Node.js y PeerJS.
+                  Aplicación para realizar videollamadas en tiempo real con WebRTC, Node.js y PeerJS.
+                  Funciona tanto en redes locales como públicas, 
+                  utilizando herramientas como ngrok para exponer el servidor a internet.
                   </p>
                   <div class="proyecto-links">
                     <a href="#" class="proyecto-link demo" id="openVideoModalIntermedio">Ver Demo</a>
                     
+                  </div>
+                </div>
+              </article>
+
+              <!-- Proyecto Intermedio 2 -->
+              <article class="proyecto-card">
+                <div class="proyecto-imagen">
+                  <img
+                    src="img/tareas.png"
+                    alt="Sistema de Gestión de Tareas"
+                  />
+                </div>
+                <div class="proyecto-contenido">
+                  <div class="proyecto-header">
+                    <h4>Sistema de Gestión de Tareas para Empleados</h4>
+                    <div class="tecnologias">
+                      <div class="tecnologias-front">
+                        <strong>Frontend:</strong>
+                        <span class="tecnologia-tag">React</span>
+                        <span class="tecnologia-tag">Vite</span>
+                        <span class="tecnologia-tag">Tailwind CSS</span>
+                        <span class="tecnologia-tag">Axios</span>
+                      </div>
+                      <div class="tecnologias-back">
+                        <strong>Backend:</strong>
+                        <span class="tecnologia-tag">Node.js</span>
+                        <span class="tecnologia-tag">Express.js</span>
+                        <span class="tecnologia-tag">JWT</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="proyecto-descripcion">
+                    Este proyecto es una aplicación web diseñada para gestionar tareas y actividades de empleados en una organización. Incluye funcionalidades como autenticación de usuarios, notificaciones, gestión de solicitudes, retroalimentación semanal y más. La interfaz es moderna y responsiva, mientras que el backend asegura un manejo eficiente de datos y seguridad.
+                  </p>
+                  <div class="proyecto-links">
+                    <a href="#" class="proyecto-link demo" id="openVideoModalTareas">Ver Demo</a>
                   </div>
                 </div>
               </article>
@@ -114,14 +154,30 @@
                   <div class="proyecto-header">
                     <h4>Sistema de Gestión de Empleados</h4>
                     <div class="tecnologias">
-                      <span class="tecnologia-tag">React</span>
-                      <span class="tecnologia-tag">Node.js</span>
-                      <span class="tecnologia-tag">SQL Server</span>
+                      <div class="tecnologias-front">
+                        <strong>Frontend:</strong>
+                        <span class="tecnologia-tag">React</span>
+                        <span class="tecnologia-tag">Vite</span>
+                        <span class="tecnologia-tag">Axios</span>
+
+                      
+                        <span class="tecnologia-tag">Tailwind CSS</span>
+
+                      </div>
+                      <div class="tecnologias-back">
+                        <strong>Backend:</strong>
+                        <span class="tecnologia-tag">Node.js</span>
+                        <span class="tecnologia-tag">Express.js</span>
+
+                        <span class="tecnologia-tag">SQL Server</span>
+                      </div>
                     </div>
                   </div>
                   <p class="proyecto-descripcion">
-                  Aplicación completa para la gestión de empleados con autenticación, 
-                  generación de reportes, y panel administrativo
+                  Aplicación Integral desarrollada para la empresa "Partner Service", 
+                  diseñada para la gestión de empleados. Incluye autenticación segura, 
+                  generación de reportes detallados, administración de nóminas, visualización 
+                  de asistencias, tardanzas, pagos y gastos de la empresa, y un panel administrativo intuitivo
                   </p>
                   <div class="proyecto-links">
                     <a href="#" class="proyecto-link demo" id="openVideoModal">Ver Demo</a>
@@ -157,6 +213,18 @@
         <h3>Demo - Aplicación de Videollamadas</h3>
         <video controls class="modal-video">
           <source src="media/ProyectoVideollamada2.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </div>
+
+    <!-- Modal para el video de Tareas -->
+    <div id="videoModalTareas" class="video-modal">
+      <div class="modal-contenido">
+        <span class="modal-cerrar" id="closeModalTareas">&times;</span>
+        <h3>Demo - Sistema de Gestión de Tareas</h3>
+        <video controls class="modal-video">
+          <source src="media/Tareas.mp4" type="video/mp4">
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -232,6 +300,42 @@
           modalIntermedio.style.display = 'none';
           videoIntermedio.pause();
           videoIntermedio.currentTime = 0;
+        }
+      });
+
+      // Modal de video para Tareas
+      const modalTareas = document.getElementById('videoModalTareas');
+      const openBtnTareas = document.getElementById('openVideoModalTareas');
+      const closeBtnTareas = document.getElementById('closeModalTareas');
+      const videoTareas = modalTareas.querySelector('.modal-video');
+
+      openBtnTareas.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalTareas.style.display = 'flex';
+        videoTareas.play();
+      });
+
+      closeBtnTareas.addEventListener('click', () => {
+        modalTareas.style.display = 'none';
+        videoTareas.pause();
+        videoTareas.currentTime = 0;
+      });
+
+      // Cerrar al hacer clic fuera del modal
+      window.addEventListener('click', (e) => {
+        if (e.target === modalTareas) {
+          modalTareas.style.display = 'none';
+          videoTareas.pause();
+          videoTareas.currentTime = 0;
+        }
+      });
+
+      // Cerrar con tecla ESC
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalTareas.style.display === 'flex') {
+          modalTareas.style.display = 'none';
+          videoTareas.pause();
+          videoTareas.currentTime = 0;
         }
       });
     </script>
